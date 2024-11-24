@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Nyan Cat</title>
+  <style>
+    body {
+      margin: 0;
+      overflow: hidden;
+      background: linear-gradient(to bottom, #000080, #1e90ff);
+      height: 100vh;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+
+    .nyan-cat {
+      position: relative;
+      display: flex;
+      align-items: center;
+    }
+
+    .rainbow {
+      position: absolute;
+      display: flex;
+      width: 300px;
+      height: 20px;
+      left: -320px;
+      animation: moveRainbow 2s linear infinite;
+    }
+
+    .rainbow div {
+      flex: 1;
+      height: 100%;
+    }
+
+    .red { background-color: red; }
+    .orange { background-color: orange; }
+    .yellow { background-color: yellow; }
+    .green { background-color: green; }
+    .blue { background-color: blue; }
+    .indigo { background-color: indigo; }
+    .violet { background-color: violet; }
+
+    @keyframes moveRainbow {
+      from {
+        left: -320px;
+      }
+      to {
+        left: 100px;
+      }
+    }
+
+    .cat {
+      width: 120px;
+      height: 70px;
+      background: #fff;
+      border-radius: 10px;
+      border: 3px solid #000;
+      box-shadow: inset -5px -5px 0px #ffa5d8, 5px 5px 0px #6a0dad;
+      position: relative;
+    }
+
+    .cat:before, .cat:after {
+      content: '';
+      position: absolute;
+      border: 3px solid #000;
+      border-radius: 50%;
+      width: 30px;
+      height: 30px;
+      background: #000;
+    }
+
+    .cat:before {
+      top: -15px;
+      left: 10px;
+    }
+
+    .cat:after {
+      top: -15px;
+      right: 10px;
+    }
+
+    .face {
+      position: absolute;
+      width: 40px;
+      height: 20px;
+      top: 20px;
+      left: 50%;
+      transform: translateX(-50%);
+      background: #ffe4e1;
+      border-radius: 50%;
+      border: 2px solid #000;
+    }
+
+    .face .eye {
+      position: absolute;
+      width: 5px;
+      height: 5px;
+      background: #000;
+      border-radius: 50%;
+      top: 8px;
+    }
+
+    .face .eye.left { left: 8px; }
+    .face .eye.right { right: 8px; }
+  </style>
+</head>
+<body>
+  <div class="nyan-cat">
+    <div class="rainbow">
+      <div class="red"></div>
+      <div class="orange"></div>
+      <div class="yellow"></div>
+      <div class="green"></div>
+      <div class="blue"></div>
+      <div class="indigo"></div>
+      <div class="violet"></div>
+    </div>
+    <div class="cat">
+      <div class="face">
+        <div class="eye left"></div>
+        <div class="eye right"></div>
+      </div>
+    </div>
+  </div>
+</body>
+</html>
