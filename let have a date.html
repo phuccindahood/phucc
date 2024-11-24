@@ -1,0 +1,70 @@
+<html>
+<head>
+<title>pookie,i have something to say</title>
+<style>
+body{
+    background-color: #facfd8
+  }
+  p {
+  text-align: center;
+  font-size: 32px;
+  font-family: Candara, Oswald;
+  }
+  img {
+  display: block;
+  margin:  auto;
+  border: 1px;
+  border-radius: 4px;
+  width: 25%;
+  }
+</style>
+</head>
+<body>
+<p>Let have a date:D ?</p>
+<img src="https://i.giphy.com/media/v1.Y2lkPTc5MGI3NjExZGlsNjBja3hhenQwbmN2bGtrY250NnlrbHl6b2RkMGhyMmcxanQwbSZlcD12MV9pbnRlcm5hbF9naWZfYnlfaWQmY3Q9Zw/uaCk04gGgSx3zijE53/giphy.gif">
+  <style>
+    #yes {
+      position: fixed;
+      border: none;
+      border-radius: 2px;
+      background: #FFCBCB(0, 255, 255, 0.5);
+      top: 70%;
+      left: 55%;
+      transform: translate(-50%, -50%);
+    }
+    #yes:hover{
+    color: #ffc6c1;
+    background:#FFC6C6;
+    text-decoration: none;
+    box-shadow: 0 0 20px 0 #BFCFE7 (0, 0, 0, 0.4);
+    }
+    #NO {
+      position: absolute;
+      border:none;
+      border-radius: 2px;
+      background: #FFCBCB(0, 255, 255, 0.5);
+      left: 39%;
+      top: 68%;
+    }
+  </style>
+  <button id="yes">YESSS!</button>
+  <button id="NO">NO</button>
+  <script>
+  const button2 = document.getElementById('NO');
+  let left = 40;
+  button2.addEventListener('mouseover', function() {
+    if(left == 40){
+      left = 57;
+    }else{
+      left = 40 ;
+    }
+    this.style.left = left + '%';
+  });
+
+  </script>
+  <script>document.getElementById('yes').addEventListener('click', function() {
+  alert('See u soon🫶');
+  });
+  </script>
+</body>
+</html>
